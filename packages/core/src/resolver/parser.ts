@@ -39,7 +39,9 @@ function mergeAndParse(
     }
   }
 
-  const order = [...nodes.keys()].sort();
+  const order = [...nodes.keys()].sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+  );
   return { nodes, order };
 }
 

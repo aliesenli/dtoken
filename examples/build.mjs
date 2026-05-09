@@ -49,8 +49,7 @@ for (const { context, graph } of contexts) {
   });
 
   const tokenCount = graph.nodes.size;
-  console.log(`  [${label}] → ${outDir}`);
-  console.log(`    ${tokenCount} tokens → tokens.json + tokens.css + tokens.dtcg.json\n`);
+  console.log(`[${label}]: ${tokenCount} tokens \n`);
 }
 
 console.log('Done.');
