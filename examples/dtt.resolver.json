@@ -1,0 +1,56 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/resolver.json",
+  "version": "2025.10",
+  "name": "DTT Example Design System",
+  "description": "Demonstrates all resolver features: sets, modifiers, contexts, permutations, inline items, and stacked context sources.",
+
+  "sets": {
+    "primitives": {
+      "description": "Raw design values — colors, spacing, type scales, radii",
+      "sources": [
+        { "$ref": "tokens/primitive/color.json" },
+        { "$ref": "tokens/primitive/spacing.json" },
+        { "$ref": "tokens/primitive/typography.json" },
+        { "$ref": "tokens/primitive/radius.json" }
+      ]
+    },
+    "composite": {
+      "description": "Composite DTCG value types — border, shadow, gradient, typography, transition",
+      "sources": [
+        { "$ref": "tokens/composite/composite.json" }
+      ]
+    }
+  },
+
+  "modifiers": {
+    "theme": {
+      "description": "Color theme — light overrides semantic layer with light values, dark with dark values",
+      "default": "light",
+      "contexts": {
+        "light": [
+          { "$ref": "tokens/semantic/light.json" }
+        ],
+        "dark": [
+          { "$ref": "tokens/semantic/dark.json" }
+        ]
+      }
+    },
+    "contrast": {
+      "description": "Contrast mode — normal uses theme defaults, high stacks additional overrides on top",
+      "default": "normal",
+      "contexts": {
+        "normal": [],
+        "high": [
+          { "$ref": "tokens/semantic/high-contrast.json" }
+        ]
+      }
+    }
+  },
+
+  "resolutionOrder": [
+    { "$ref": "#/sets/primitives" },
+    { "$ref": "#/sets/composite" },
+    { "$ref": "#/modifiers/theme" },
+    { "$ref": "#/modifiers/contrast" }
+  ]
+}

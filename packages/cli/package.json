@@ -1,0 +1,25 @@
+{
+  "name": "@dtt/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "dtt": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dtt/core": "workspace:*",
+    "@dtt/generator": "workspace:*",
+    "@dtt/plugin-css": "workspace:*",
+    "@dtt/plugin-json": "workspace:*",
+    "citty": "^0.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}

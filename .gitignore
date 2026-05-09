@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.local
+
+# generated outputs — not checked in
+examples/dist/
+

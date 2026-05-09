@@ -1,0 +1,15 @@
+{
+  "semantic": {
+    "color": {
+      "text": {
+        "primary":   { "$value": "{color.black}",    "$type": "color" },
+        "secondary": { "$value": "{color.gray.800}", "$type": "color" },
+        "disabled":  { "$value": "{color.gray.600}", "$type": "color" }
+      },
+      "border": {
+        "default": { "$value": "{color.gray.800}", "$type": "color" },
+        "strong":  { "$value": "{color.black}",    "$type": "color" }
+      }
+    }
+  }
+}

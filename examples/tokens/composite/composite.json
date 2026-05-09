@@ -1,0 +1,168 @@
+{
+  "composite": {
+    "color": {
+      "oklch": {
+        "$value": { "colorSpace": "oklch", "components": [0.6, 0.2, 240] },
+        "$type": "color",
+        "$description": "Brand blue in oklch color space"
+      },
+      "p3": {
+        "$value": { "colorSpace": "display-p3", "components": [0.1, 0.45, 0.95] },
+        "$type": "color",
+        "$description": "Wide gamut P3 blue"
+      },
+      "overlay": {
+        "$value": { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.4 },
+        "$type": "color",
+        "$description": "Semi-transparent black overlay"
+      }
+    },
+    "spacing": {
+      "base": {
+        "$value": { "value": 1, "unit": "rem" },
+        "$type": "dimension",
+        "$description": "Base spacing unit as rem"
+      },
+      "xl": {
+        "$value": { "value": 3, "unit": "rem" },
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": {
+          "width": { "value": 1, "unit": "px" },
+          "style": "solid",
+          "color": "{color.gray.200}"
+        },
+        "$type": "border",
+        "$description": "Default border — color resolved from primitive ref"
+      },
+      "brand": {
+        "$value": {
+          "width": { "value": 2, "unit": "px" },
+          "style": "solid",
+          "color": "{color.blue.500}"
+        },
+        "$type": "border"
+      },
+      "dashed": {
+        "$value": {
+          "width": { "value": 1, "unit": "px" },
+          "style": "dashed",
+          "color": { "colorSpace": "srgb", "components": [0.4, 0.4, 0.4] }
+        },
+        "$type": "border",
+        "$description": "Border with inline composite color (no ref)"
+      }
+    },
+    "shadow": {
+      "sm": {
+        "$value": {
+          "offsetX": { "value": 0, "unit": "px" },
+          "offsetY": { "value": 1, "unit": "px" },
+          "blur":    { "value": 3, "unit": "px" },
+          "spread":  { "value": 0, "unit": "px" },
+          "color":   { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.1 }
+        },
+        "$type": "shadow"
+      },
+      "md": {
+        "$value": {
+          "offsetX": { "value": 0, "unit": "px" },
+          "offsetY": { "value": 4, "unit": "px" },
+          "blur":    { "value": 12, "unit": "px" },
+          "spread":  { "value": 0, "unit": "px" },
+          "color":   { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.15 }
+        },
+        "$type": "shadow"
+      },
+      "inset": {
+        "$value": {
+          "offsetX": { "value": 0, "unit": "px" },
+          "offsetY": { "value": 2, "unit": "px" },
+          "blur":    { "value": 4, "unit": "px" },
+          "color":   "{color.blue.500}",
+          "inset":   true
+        },
+        "$type": "shadow",
+        "$description": "Inset shadow — color resolved from ref"
+      }
+    },
+    "gradient": {
+      "brand": {
+        "$value": [
+          { "color": "{color.blue.500}", "position": 0 },
+          { "color": { "colorSpace": "oklch", "components": [0.4, 0.25, 280] }, "position": 1 }
+        ],
+        "$type": "gradient",
+        "$description": "Brand gradient — first stop is a ref, second is inline oklch"
+      },
+      "subtle": {
+        "$value": [
+          { "color": "{color.blue.100}", "position": 0 },
+          { "color": "{color.white}",    "position": 1 }
+        ],
+        "$type": "gradient",
+        "$description": "Both stops resolved from refs"
+      },
+      "subtle-mid": {
+        "$value": [
+          { "color": "{color.blue.300}", "position": 0 },
+          { "color": "transparent",      "position": 1 }
+        ],
+        "$type": "gradient"
+      }
+    },
+    "typography": {
+      "body": {
+        "$value": {
+          "fontFamily": "Inter, system-ui, sans-serif",
+          "fontSize":   { "value": 1, "unit": "rem" },
+          "fontWeight": 400,
+          "lineHeight": 1.5
+        },
+        "$type": "typography",
+        "$description": "Decomposed into --composite-typography-body-family, -size, -weight, -line-height"
+      },
+      "heading": {
+        "$value": {
+          "fontFamily": "Inter, system-ui, sans-serif",
+          "fontSize":   { "value": 2, "unit": "rem" },
+          "fontWeight": 700,
+          "lineHeight": 1.25,
+          "letterSpacing": { "value": -0.5, "unit": "px" }
+        },
+        "$type": "typography"
+      },
+      "code": {
+        "$value": {
+          "fontFamily": "JetBrains Mono, monospace",
+          "fontSize":   { "value": 0.875, "unit": "rem" },
+          "fontWeight": 400
+        },
+        "$type": "typography"
+      }
+    },
+    "transition": {
+      "fast": {
+        "$value": {
+          "duration":       { "value": 150, "unit": "ms" },
+          "delay":          { "value": 0,   "unit": "ms" },
+          "timingFunction": [0.4, 0, 0.2, 1]
+        },
+        "$type": "transition",
+        "$description": "Standard ease-in-out approximation as cubic Bézier"
+      },
+      "slow": {
+        "$value": {
+          "duration":       { "value": 400, "unit": "ms" },
+          "delay":          { "value": 50,  "unit": "ms" },
+          "timingFunction": [0, 0, 0.2, 1]
+        },
+        "$type": "transition",
+        "$description": "Ease-out approximation as cubic Bézier"
+      }
+    }
+  }
+}

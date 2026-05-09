@@ -1,0 +1,35 @@
+{
+  "semantic": {
+    "color": {
+      "bg": {
+        "page":    { "$value": "{color.white}",   "$type": "color", "$description": "Main page background" },
+        "surface": { "$value": "{color.gray.50}",  "$type": "color", "$description": "Card/panel background" },
+        "sunken":  { "$value": "{color.gray.100}", "$type": "color", "$description": "Inset/recessed areas" }
+      },
+      "text": {
+        "primary":   { "$value": "{color.gray.900}", "$type": "color" },
+        "secondary": { "$value": "{color.gray.600}", "$type": "color" },
+        "disabled":  { "$value": "{color.gray.400}", "$type": "color" },
+        "inverse":   { "$value": "{color.white}",    "$type": "color" }
+      },
+      "border": {
+        "default": { "$value": "{color.gray.200}", "$type": "color" },
+        "strong":  { "$value": "{color.gray.400}", "$type": "color" }
+      },
+      "brand": {
+        "default": { "$value": "{color.blue.500}", "$type": "color" },
+        "hover":   { "$value": "{color.blue.700}", "$type": "color" },
+        "subtle":  { "$value": "{color.blue.100}", "$type": "color" }
+      },
+      "danger": {
+        "default": { "$value": "{color.red.500}", "$type": "color" },
+        "hover":   { "$value": "{color.red.700}", "$type": "color" },
+        "subtle":  { "$value": "{color.red.400}", "$type": "color" }
+      },
+      "success": {
+        "default": { "$value": "{color.green.500}", "$type": "color" },
+        "subtle":  { "$value": "{color.green.400}", "$type": "color" }
+      }
+    }
+  }
+}

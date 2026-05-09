@@ -1,0 +1,35 @@
+{
+  "semantic": {
+    "color": {
+      "bg": {
+        "page":    { "$value": "{color.gray.900}", "$type": "color" },
+        "surface": { "$value": "{color.gray.800}", "$type": "color" },
+        "sunken":  { "$value": "{color.black}",    "$type": "color" }
+      },
+      "text": {
+        "primary":   { "$value": "{color.white}",    "$type": "color" },
+        "secondary": { "$value": "{color.gray.400}", "$type": "color" },
+        "disabled":  { "$value": "{color.gray.600}", "$type": "color" },
+        "inverse":   { "$value": "{color.gray.900}", "$type": "color" }
+      },
+      "border": {
+        "default": { "$value": "{color.gray.800}", "$type": "color" },
+        "strong":  { "$value": "{color.gray.600}", "$type": "color" }
+      },
+      "brand": {
+        "default": { "$value": "{color.blue.300}", "$type": "color" },
+        "hover":   { "$value": "{color.blue.100}", "$type": "color" },
+        "subtle":  { "$value": "{color.blue.900}", "$type": "color" }
+      },
+      "danger": {
+        "default": { "$value": "{color.red.400}", "$type": "color" },
+        "hover":   { "$value": "{color.red.400}", "$type": "color" },
+        "subtle":  { "$value": "{color.red.700}", "$type": "color" }
+      },
+      "success": {
+        "default": { "$value": "{color.green.400}", "$type": "color" },
+        "subtle":  { "$value": "{color.green.700}", "$type": "color" }
+      }
+    }
+  }
+}
