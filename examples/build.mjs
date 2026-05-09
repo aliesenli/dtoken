@@ -23,7 +23,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
 const resolverPath = new URL('./dtt.resolver.json', import.meta.url).pathname;
-const outBase = new URL('./dist', import.meta.url).pathname;
+const outBase = new URL('./output', import.meta.url).pathname;
 
 console.log('DTT Example Build\n');
 
@@ -34,7 +34,7 @@ console.log(`Resolver produced ${contexts.length} permutations:\n`);
 for (const { context, graph } of contexts) {
   const subDir = Object.entries(context)
     .sort(([a], [b]) => a.localeCompare(b))
-    .map(([k, v]) => `${k}=${v}`)
+    .map(([k, v]) => `${k}-${v}`)
     .join('/');
   const outDir = join(outBase, subDir);
   const label = subDir.replaceAll('/', ', ');

@@ -5,18 +5,13 @@
   "description": "Demonstrates all resolver features: sets, modifiers, contexts, permutations, inline items, and stacked context sources.",
 
   "sets": {
-    "primitives": {
-      "description": "Raw design values — colors, spacing, type scales, radii",
+    "foundation": {
+      "description": "All base token values — primitives and composite types",
       "sources": [
         { "$ref": "tokens/primitive/color.json" },
         { "$ref": "tokens/primitive/spacing.json" },
         { "$ref": "tokens/primitive/typography.json" },
-        { "$ref": "tokens/primitive/radius.json" }
-      ]
-    },
-    "composite": {
-      "description": "Composite DTCG value types — border, shadow, gradient, typography, transition",
-      "sources": [
+        { "$ref": "tokens/primitive/radius.json" },
         { "$ref": "tokens/composite/composite.json" }
       ]
     }
@@ -48,8 +43,7 @@
   },
 
   "resolutionOrder": [
-    { "$ref": "#/sets/primitives" },
-    { "$ref": "#/sets/composite" },
+    { "$ref": "#/sets/foundation" },
     { "$ref": "#/modifiers/theme" },
     { "$ref": "#/modifiers/contrast" }
   ]

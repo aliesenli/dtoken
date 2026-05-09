@@ -77,7 +77,7 @@ const buildCmd = defineCommand({
         for (const { context, graph } of contexts) {
           const subDir = Object.entries(context)
             .sort(([a], [b]) => a.localeCompare(b))
-            .map(([k, v]) => `${k}=${v}`)
+            .map(([k, v]) => `${k}-${v}`)
             .join('/');
           const contextOutDir = subDir ? join(outDir, subDir) : outDir;
           const contextLabel = subDir ? ` [${subDir.replaceAll('/', ', ')}]` : '';
